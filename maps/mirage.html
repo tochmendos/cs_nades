@@ -1,55 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Links</title>
-    <style>
-        /* Add some basic styling to the list */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        li:hover {
-            background-color: #f0f0f0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #337ab7;
-        }
-
-        a:hover {
-            color: #23527c;
-        }
-
-        /* Make the link span the entire width of the li */
-        li a {
-            display: block;
-            width: 100%;
-            text-align: left;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./map.css">
+    <title>Mirage</title>
+    
 </head>
 <body>
-    <div id="app">
-        <h1>Раскиды</h1>
-        <ul>
-            <li v-for="spread in spreads" :key="spread.id">
-                <a :href="spread.link">{{ spread.title }}</a>
-            </li>
-        </ul>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="mirage.js"></script>
+    <h1>Mirage
+    </h1>
+    <ul id="MirageListContainer"></ul>
+    <script src="../nades.js"></script>
 </body>
 </html>

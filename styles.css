@@ -1,31 +1,33 @@
 /* Add some basic styling to the list */
-ul {
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  ul {
     list-style: none;
-    padding: 0;
     margin: 0;
-}
-
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-li:hover {
-    background-color: #f0f0f0;
-}
-
-li a {
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
     display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-}
-
-a {
+    padding: 20px;
+    border-radius: 10px;
     text-decoration: none;
-    color: #337ab7;
-}
-
-a:hover {
-    color: #23527c;
-}
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+  }

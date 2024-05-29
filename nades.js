@@ -1,29 +1,40 @@
 const myList = [
     {
-        id: 1,
-        map: "Anubis",
+        map: "Ancient",
         side: "T",
-        description: "Flashes for Terrorists",
-        link: "./maps/anubis_flashes.html"
+        description: "Smokes for Terrorists",
+        link: "./maps/ancient_smokes.html"
     },
     {
-        id: 2,
-        map: "Dust 2",
+        map: "Ancient",
         side: "CT",
         description: "Smokes for Counter-Terrorists",
-        link: "./maps/dust2_smokes.html"
+        link: "./maps/ancient_smokes.html"
+    },
+    {
+        map: "Mirage",
+        side: "CT",
+        description: "Smokes for Counter-Terrorists",
+        link: "./maps/mirage_smokes.html"
     },
     // Add more items to the list...
 ];
 
-const listHTML = myList.map((item) => {
-    return (
-        `<li>` +
-        `<a href="${item.link}">${item.map} (${item.side}) - ${item.description}</a>` +
-        `</li>`
-    );
-}).join("");
+const generateListHTML = (list, mapName) => {
+    return list
+        .filter((item) => item.map === mapName)
+        .map((item) => {
+            return (
+                `<li>` +
+                `<a href="${item.link}">${item.map} (${item.side}) - ${item.description}</a>` +
+                `</li>`
+            );
+        })
+        .join("");
+};
 
+const AncientListContainer = document.getElementById("AncientListContainer");
+AncientListContainer.innerHTML = generateListHTML(myList, "Ancient");
 
-const myListContainer = document.getElementById("myListContainer");
-myListContainer.innerHTML = listHTML;
+const MirageListContainer = document.getElementById("MirageListContainer");
+MirageListContainer.innerHTML = generateListHTML(myList, "Mirage");
